@@ -1,70 +1,63 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Main Recipe</title>
+
 <style>
-   body {
+    body {
         margin: 0;
         padding: 0;
-        background-color: #EFECE3; /* Your color here */
-    }
-.fullscreen-img 
-    {
-         
-      top: 0;
-      left: 0;
-      width: 100vw;         
-      height: 100vh;        
-      object-fit: cover;    
-      
-    }
-	
-	.navbar
-    {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;             
-    padding: 10px 20px;
-    background: #EFECE3;
+        background-color: #EFECE3;
+        font-family: Arial, sans-serif;
     }
 
-/* Left side (logo + name) */
-    .left-section 
-    {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    .fullscreen-img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 
-    .logo 
-    {
-    width: 50px;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #EFECE3;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
-/* Right side (menu) */
-    .right-section 
-    {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    .right-section a 
-    {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+    .logo {
+        width: 50px;
     }
-/* Right side About us */
-    .right-section about-us
-    {
-        text-decoration:none;
+
+    .right-section {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .right-section a {
+        text-decoration: none;
         font-size: 18px;
-        color:black;
+        color: black;
     }
 
-    .food-row 
-    {
+    .internal {
+        color: black;
+        text-align: center;
+        background-color: #EFECE3;
+    }
+
+    .food-row {
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -72,49 +65,41 @@
         padding: 20px;
     }
 
-    .food-card 
-    {
-        background:whtie;
+    .food-card {
+        background: white;
         width: 250px;
         padding: 10px;
         border-radius: 12px;
         box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
         text-align: center;
         transition: 0.3s;
+        cursor: pointer;
     }
 
-    .food-card:hover 
-    {
+    .food-card:hover {
         transform: scale(1.03);
     }
 
-    .food-card img 
-    {
+    .food-card img {
         width: 100%;
         height: 180px;
         object-fit: cover;
         border-radius: 10px;
     }
 
-    .food-name 
-    {
+    .food-name {
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
         color: #333;
     }
-	
 </style>
 </head>
 
+<body>
 
-
-</body>
-</html>
-
-
+<!-- NAVIGATION BAR -->
 <nav class="navbar">
-
     <div class="left-section">
         <img src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\Logo.jpg" class="logo">
         <h2 class="site-name">Recipe Book</h2>
@@ -127,67 +112,29 @@
     </ul>
 </nav>
 
-
-<style>
-.internal{color:black; text-align:center;}
-.internal{background-color:#EFECE3;}
- </style>
-  
+<!-- FIRST PAGE IMAGE -->
 <img class="fullscreen-img" src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\First Page.png" alt="Background image">
-  <div class="content">
 
+<!-- INDIAN SECTION -->
 <a href="indiandish.html">
 <h1 class="internal">Famous Indian Dishes</h1>
 </a>
 
 <div class="food-row">
-
-    <div class="food-card">
-        <img src="https://i.ytimg.com/vi/Do7ZdUodDdw/maxresdefault.jpg">
-	 <div class="food-name">Biryani</div>
-    </div>
-
-	
-        <div class="food-card">
-        <img src="https://myfoodstory.com/wp-content/uploads/2018/08/Dal-Makhani-New-3-500x500.jpg">
-	 <div class="food-name">Dal Makhani</div>
-    </div>
-
-        <div class="food-card">
-        <img src="https://ministryofcurry.com/wp-content/uploads/2025/08/samosa-6.jpg">
-	 <div class="food-name">Samosa</div>
-    </div>
-	
-	 <div class="food-card">
-        <img src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg">
-	 <div class="food-name">Dosa</div>
-    </div>
-
-	<div class="food-card">
-        <img src="https://www.cookwithmanali.com/wp-content/uploads/2018/05/Best-Pav-Bhaji-Recipe.jpg">
-	 <div class="food-name">Pav Bhaji</div>
-    </div>
-
-	<div class="food-card">
-        <img src="https://myfoodstory.com/wp-content/uploads/2022/04/Shahi-Paneer-2.jpg">
-	 <div class="food-name">Sahi Panner</div>
-    </div>
-
-	<div class="food-card">
-        <img src="https://i.pinimg.com/736x/80/3f/f0/803ff029867e021b7b4193f58e1c4ad1.jpg">
-	 <div class="food-name">Chole Bhature</div>
-    </div>
-
+    <div class="food-card"><img src="https://i.ytimg.com/vi/Do7ZdUodDdw/maxresdefault.jpg"><div class="food-name">Biryani</div></div>
+    <div class="food-card"><img src="https://myfoodstory.com/wp-content/uploads/2018/08/Dal-Makhani-New-3-500x500.jpg"><div class="food-name">Dal Makhani</div></div>
+    <div class="food-card"><img src="https://ministryofcurry.com/wp-content/uploads/2025/08/samosa-6.jpg"><div class="food-name">Samosa</div></div>
+    <div class="food-card"><img src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"><div class="food-name">Dosa</div></div>
+    <div class="food-card"><img src="https://www.cookwithmanali.com/wp-content/uploads/2018/05/Best-Pav-Bhaji-Recipe.jpg"><div class="food-name">Pav Bhaji</div></div>
+    <div class="food-card"><img src="https://myfoodstory.com/wp-content/uploads/2022/04/Shahi-Paneer-2.jpg"><div class="food-name">Sahi Panner</div></div>
+    <div class="food-card"><img src="https://i.pinimg.com/736x/80/3f/f0/803ff029867e021b7b4193f58e1c4ad1.jpg"><div class="food-name">Chole Bhature</div></div>
 </div>
 
-
-
- 
+<!-- ITALIAN SECTION -->
 <h1 class="internal">Italian</h1>
 
 <div class="food-row">
-
-    <div class="food-card">
+     <div class="food-card">
         <img src="https://c.ndtvimg.com/2021-04/umk8i7ko_pasta_625x300_01_April_21.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675">
        <a href="pasta.html">
 	 <div class="food-name">Pasta</div>
@@ -219,12 +166,10 @@
 </div>
 
 
-
+<!-- AMERICAN SECTION -->
 <h1 class="internal">American</h1>
-
 <div class="food-row">
-
-    <div class="food-card">
+ <div class="food-card">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqAibL3INiplUTS4qsIYmIqqKzbNfloQCJHURNv_J_zPaKHtey2ZMkrBywkrkFjqYjTI&usqp=CAU">
        <a href="burger.html">
 	 <div class="food-name">Burger</div>
@@ -256,22 +201,35 @@
 
 </div>
 
+<!-- ABOUT US LINK -->
 <nav class="navbar">
     <div class="right-section">
-        <a href="aboutus.html">
-            About Us 
-        </a>
+        <a href="aboutus.html">About Us</a>
     </div>
-   
-</nav>   
+</nav>
 
- <img class="fullscreen-img" src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\aboutus.png" alt="Background image">
-  <div class="content">
+<!-- ABOUT US IMAGE -->
+<img class="fullscreen-img" src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\aboutus.png">
+
+<!-- POP-UP OVERLAY -->
+<div id="popupOverlay" 
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); 
+     justify-content:center; align-items:center; z-index:99999;">
+    <div id="popupBox" 
+         style="background:white; width:350px; padding:20px; border-radius:12px; text-align:center; position:relative;">
+        <span id="closePopup" 
+              style="position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer;">&times;</span>
+        <img id="popupImg" src="" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+        <h2 id="popupTitle" style="margin:15px 0 10px;"></h2>
+        <p id="popupText" style="color:#444;"></p>
     </div>
-
+</div>
 
 <script>
+// -----------------------------
 // SCROLL TO TOP BUTTON
+// -----------------------------
 let topBtn = document.createElement("button");
 topBtn.innerText = "⬆ Top";
 topBtn.style.position = "fixed";
@@ -287,29 +245,112 @@ topBtn.style.display = "none";
 document.body.appendChild(topBtn);
 
 window.onscroll = function(){
-    if (window.scrollY > 300){
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
 };
+topBtn.onclick = () => window.scrollTo({top:0, behavior:"smooth"});
 
-topBtn.onclick = function(){
-    window.scrollTo({top:0 , behavior:"smooth"});
-};
-
-
-// CLICK ANIMATION ON FOOD CARDS
-let cards = document.querySelectorAll('.food-card');
-cards.forEach(card => {
+// -----------------------------
+// CLICK ANIMATION
+// -----------------------------
+document.querySelectorAll('.food-card').forEach(card => {
     card.addEventListener("click", () => {
         card.style.transform = "scale(0.95)";
-        setTimeout(() => {
-            card.style.transform = "scale(1)";
-        }, 150);
+        setTimeout(() => card.style.transform = "scale(1)", 150);
     });
 });
+
+// -----------------------------
+// SEARCH BAR
+// -----------------------------
+let searchBar = document.createElement("input");
+searchBar.placeholder = "Search food...";
+searchBar.style.position = "fixed";
+searchBar.style.top = "90px";
+searchBar.style.right = "20px";
+searchBar.style.padding = "10px 15px";
+searchBar.style.borderRadius = "8px";
+searchBar.style.border = "1px solid #777";
+searchBar.style.zIndex = "9999";
+document.body.appendChild(searchBar);
+
+searchBar.addEventListener("keyup", function () {
+    let value = searchBar.value.toLowerCase();
+    document.querySelectorAll(".food-card").forEach(card => {
+        let name = card.querySelector(".food-name").innerText.toLowerCase();
+        card.style.display = name.includes(value) ? "block" : "none";
+    });
+});
+
+// -----------------------------
+// HOVER GLOW EFFECT
+// -----------------------------
+document.querySelectorAll(".food-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.boxShadow = "0 0 15px #ff9a3c";
+    });
+    card.addEventListener("mouseleave", () => {
+        card.style.boxShadow = "0px 2px 8px rgba(0,0,0,0.15)";
+    });
+});
+
+// -----------------------------
+// FADE-IN ANIMATION
+// -----------------------------
+window.onload = () => {
+    document.querySelectorAll(".food-card").forEach((card, i) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            card.style.transition = "0.5s";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0px)";
+        }, i * 120);
+    });
+};
+
+// -----------------------------
+// POP-UP RECIPE PREVIEW
+// -----------------------------
+let recipeInfo = {
+    "Biryani": "A flavorful spiced rice dish cooked with aromatic spices.",
+    "Dal Makhani": "A creamy lentil curry cooked with butter & cream.",
+    "Samosa": "A crispy fried snack stuffed with spicy potatoes.",
+    "Dosa": "A thin crispy South Indian crepe.",
+    "Pav Bhaji": "A spicy vegetable curry with buttered pav.",
+    "Sahi Panner": "A royal creamy paneer dish.",
+    "Chole Bhature": "Spicy chickpeas served with fried bread.",
+    "Pasta": "Italian pasta cooked with herbs and sauce.",
+    "Pizza": "Cheesy Italian flatbread with toppings.",
+    "Tiramisu": "Coffee-flavored Italian dessert.",
+    "Lasanga": "Layered pasta with cheese & sauce.",
+    "Burger": "A juicy patty inside soft buns.",
+    "Apple Pie": "Sweet American pie with apples.",
+    "Hot Dog": "Grilled sausage inside a bun.",
+    "Donuts": "Sweet fried rings with toppings."
+};
+
+let overlay = document.getElementById("popupOverlay");
+let pImg = document.getElementById("popupImg");
+let pTitle = document.getElementById("popupTitle");
+let pText = document.getElementById("popupText");
+let closeBtn = document.getElementById("closePopup");
+
+document.querySelectorAll(".food-card").forEach(card => {
+    card.addEventListener("click", () => {
+        let foodName = card.querySelector(".food-name").innerText;
+        let foodImg = card.querySelector("img").src;
+        pImg.src = foodImg;
+        pTitle.innerText = foodName;
+        pText.innerText = recipeInfo[foodName];
+        overlay.style.display = "flex";
+    });
+});
+
+closeBtn.onclick = () => overlay.style.display = "none";
+overlay.onclick = (e) => { if (e.target === overlay) overlay.style.display = "none"; };
+
 </script>
 
 </body>
 </html>
+
