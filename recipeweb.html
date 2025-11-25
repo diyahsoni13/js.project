@@ -1,24 +1,26 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Main Recipe</title>
 
 <style>
-    body {
+    body
+	{
         margin: 0;
         padding: 0;
         background-color: #EFECE3;
         font-family: Arial, sans-serif;
     }
 
-    .fullscreen-img {
+    .fullscreen-img 
+	{
         width: 100vw;
         height: 100vh;
         object-fit: cover;
     }
 
-    .navbar {
+    .navbar
+	{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -29,35 +31,41 @@
         z-index: 1000;
     }
 
-    .left-section {
+    .left-section
+	{
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    .logo {
+    .logo
+	{
         width: 50px;
     }
 
-    .right-section {
+    .right-section
+	{
         list-style: none;
         display: flex;
         gap: 20px;
     }
 
-    .right-section a {
+    .right-section a
+	{
         text-decoration: none;
         font-size: 18px;
         color: black;
     }
 
-    .internal {
+    .internal
+	{
         color: black;
         text-align: center;
         background-color: #EFECE3;
     }
 
-    .food-row {
+    .food-row
+	{
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -65,7 +73,8 @@
         padding: 20px;
     }
 
-    .food-card {
+    .food-card
+	{
         background: white;
         width: 250px;
         padding: 10px;
@@ -76,18 +85,21 @@
         cursor: pointer;
     }
 
-    .food-card:hover {
+    .food-card:hover
+	{
         transform: scale(1.03);
     }
 
-    .food-card img {
+    .food-card img 
+	{
         width: 100%;
         height: 180px;
         object-fit: cover;
         border-radius: 10px;
     }
 
-    .food-name {
+    .food-name
+	{
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
@@ -98,7 +110,7 @@
 
 <body>
 
-<!-- NAVIGATION BAR -->
+
 <nav class="navbar">
     <div class="left-section">
         <img src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\Logo.jpg" class="logo">
@@ -112,10 +124,8 @@
     </ul>
 </nav>
 
-<!-- FIRST PAGE IMAGE -->
 <img class="fullscreen-img" src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\First Page.png" alt="Background image">
-
-<!-- INDIAN SECTION -->
+	
 <a href="indiandish.html">
 <h1 class="internal">Famous Indian Dishes</h1>
 </a>
@@ -130,7 +140,6 @@
     <div class="food-card"><img src="https://i.pinimg.com/736x/80/3f/f0/803ff029867e021b7b4193f58e1c4ad1.jpg"><div class="food-name">Chole Bhature</div></div>
 </div>
 
-<!-- ITALIAN SECTION -->
 <h1 class="internal">Italian</h1>
 
 <div class="food-row">
@@ -165,8 +174,7 @@
 
 </div>
 
-
-<!-- AMERICAN SECTION -->
+	
 <h1 class="internal">American</h1>
 <div class="food-row">
  <div class="food-card">
@@ -201,17 +209,15 @@
 
 </div>
 
-<!-- ABOUT US LINK -->
+
 <nav class="navbar">
     <div class="right-section">
         <a href="aboutus.html">About Us</a>
     </div>
 </nav>
-
-<!-- ABOUT US IMAGE -->
 <img class="fullscreen-img" src="C:\Users\diyah\OneDrive\Documents\JAVA SCRIPT\aboutus.png">
 
-<!-- POP-UP OVERLAY -->
+
 <div id="popupOverlay" 
      style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
      background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); 
@@ -227,9 +233,6 @@
 </div>
 
 <script>
-// -----------------------------
-// SCROLL TO TOP BUTTON
-// -----------------------------
 let topBtn = document.createElement("button");
 topBtn.innerText = "⬆ Top";
 topBtn.style.position = "fixed";
@@ -244,24 +247,24 @@ topBtn.style.cursor = "pointer";
 topBtn.style.display = "none";
 document.body.appendChild(topBtn);
 
-window.onscroll = function(){
+window.onscroll = function()
+{
     topBtn.style.display = window.scrollY > 300 ? "block" : "none";
 };
 topBtn.onclick = () => window.scrollTo({top:0, behavior:"smooth"});
 
-// -----------------------------
-// CLICK ANIMATION
-// -----------------------------
-document.querySelectorAll('.food-card').forEach(card => {
-    card.addEventListener("click", () => {
+
+	
+document.querySelectorAll('.food-card').forEach(card => 
+	{
+    card.addEventListener("click", () => 
+		{
         card.style.transform = "scale(0.95)";
         setTimeout(() => card.style.transform = "scale(1)", 150);
     });
 });
 
-// -----------------------------
-// SEARCH BAR
-// -----------------------------
+
 let searchBar = document.createElement("input");
 searchBar.placeholder = "Search food...";
 searchBar.style.position = "fixed";
@@ -281,9 +284,7 @@ searchBar.addEventListener("keyup", function () {
     });
 });
 
-// -----------------------------
-// HOVER GLOW EFFECT
-// -----------------------------
+	
 document.querySelectorAll(".food-card").forEach(card => {
     card.addEventListener("mouseenter", () => {
         card.style.boxShadow = "0 0 15px #ff9a3c";
@@ -293,25 +294,25 @@ document.querySelectorAll(".food-card").forEach(card => {
     });
 });
 
-// -----------------------------
-// FADE-IN ANIMATION
-// -----------------------------
-window.onload = () => {
-    document.querySelectorAll(".food-card").forEach((card, i) => {
+
+window.onload = () => 
+	{
+    document.querySelectorAll(".food-card").forEach((card, i) => 
+		{
         card.style.opacity = "0";
         card.style.transform = "translateY(20px)";
-        setTimeout(() => {
+        setTimeout(() => 
+			{
             card.style.transition = "0.5s";
             card.style.opacity = "1";
             card.style.transform = "translateY(0px)";
-        }, i * 120);
-    });
-};
+           }, i * 120);
+        });
+  };
 
-// -----------------------------
-// POP-UP RECIPE PREVIEW
-// -----------------------------
-let recipeInfo = {
+
+let recipeInfo = 
+{
     "Biryani": "A flavorful spiced rice dish cooked with aromatic spices.",
     "Dal Makhani": "A creamy lentil curry cooked with butter & cream.",
     "Samosa": "A crispy fried snack stuffed with spicy potatoes.",
@@ -335,8 +336,10 @@ let pTitle = document.getElementById("popupTitle");
 let pText = document.getElementById("popupText");
 let closeBtn = document.getElementById("closePopup");
 
-document.querySelectorAll(".food-card").forEach(card => {
-    card.addEventListener("click", () => {
+document.querySelectorAll(".food-card").forEach(card =>
+	{
+    card.addEventListener("click", () =>
+		{
         let foodName = card.querySelector(".food-name").innerText;
         let foodImg = card.querySelector("img").src;
         pImg.src = foodImg;
@@ -347,10 +350,12 @@ document.querySelectorAll(".food-card").forEach(card => {
 });
 
 closeBtn.onclick = () => overlay.style.display = "none";
-overlay.onclick = (e) => { if (e.target === overlay) overlay.style.display = "none"; };
+overlay.onclick = (e) =>
+	{ if (e.target === overlay) overlay.style.display = "none"; };
 
 </script>
 
 </body>
 </html>
+
 
